@@ -7,7 +7,8 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "compodoc": "npx compodoc -p tsconfig.app.json src"
   },
   "private": true,
   "dependencies": {
@@ -28,6 +29,7 @@
     "@angular/cli": "~9.1.0",
     "@angular/compiler-cli": "~9.1.0",
     "@angular/language-service": "~9.1.0",
+    "@compodoc/compodoc": "^1.1.11",
     "@types/jasmine": "~3.5.0",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "^12.11.1",
@@ -53,5 +55,15 @@
       "pre-commit": "pretty-quick --staged && ng lint && ng test",
       "pre-push": "ng build --aot true"
     }
+  },
+  "compodoc": {
+    "name": "letuscode documentation",
+    "serve": true,
+    "open": true,
+    "watch": true,
+    "theme": "postmark",
+    "unitTestCoverage": "/Users/jason.williams/Documents/Code/personal/letuscode/angular_frontend/frontend/coverage/frontend/coverage-summary.json",
+    "coverageMinimumPerFile": 0
+
   }
 }
